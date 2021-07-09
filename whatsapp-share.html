@@ -1,0 +1,38 @@
+
+  <html>
+    <head>
+      <link rel="stylesheet" href="./fonts/font-awesome.css">
+      <link rel="stylesheet" href="style.css">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script>
+        function createLink() {
+          const p = phone.value;
+          wlink.href = `https://wa.me/${p}`;
+        }
+      </script>
+      <title>whats App Share Phone</title>
+    </head>
+    <body>
+      <header>
+        <div class="head-bar">
+          <img class="logo" src="./images/whatsapp.svg">
+          <h4>WhatsApp Share Phone</h4>
+        </div>
+      </header>
+      <main>
+        <div class="textbox-block">
+          <label class="lable" for="phone">Phone to message to:</label>
+          <input class="textbox" id="phone" type="tel" onchange="createLink()"/>
+          <div class="btn-call">
+            <a id="wlink" href="">Start Chat</a>
+          </div>
+          <div class="border">
+            <h5>Designed by <a href="linkedin.com/in/mehrnoosh-akbarizadeh-083b64149">Mehrnoosh Akbarizadeh</a></h5>
+            <h5><a href="https://github.com/mehrnooshakbarizadeh">github.com/mehrnooshakbarizadeh</a></h5>
+          </div>
+        </div>
+      </main>
+    </body>
+  </html>
