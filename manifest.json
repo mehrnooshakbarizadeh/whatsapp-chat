@@ -1,0 +1,32 @@
+{
+  "short_name": "WA_StartChat",
+  "name": "WhatsApp Start Chat",
+  "icons": [
+    {
+      "src": "/whatsapp-chat/images/whatsapp_32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/whatsapp-chat/images/whatsapp_64.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "/whatsapp-chat/images/whatsapp_192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/whatsapp-chat/images/whatsapp_512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/whatsapp-chat/index.html?source=pwa",
+  "background_color": "#0bbfa5",
+  "display": "standalone",
+  "scope": "/whatsapp-chat",
+  "theme_color": "#0bbfa5",
+  "description": "You can start Chat without creating a new contact"
+}
