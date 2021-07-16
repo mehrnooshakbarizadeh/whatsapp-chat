@@ -11,20 +11,28 @@
           const p = phone.value;
           wlink.href = `https://wa.me/${p}`;
         }
+        function handleKeyPress(e) {
+          if (e.key === 'Enter') {
+            document.getElementById('wlink').focus();
+          }
+        }
+        function handleLoaded(){
+          document.getElementById('phone').addEventListener("keypress", handleKeyPress);
+        }
       </script>
-      <title>whats App Share Phone</title>
+      <title>WhatsApp Start Chat</title>
     </head>
-    <body>
+    <body onload="handleLoaded()">
       <header>
         <div class="head-bar">
           <img class="logo" src="./images/whatsapp.svg">
-          <h4>WhatsApp Share Phone</h4>
+          <h4>WhatsApp Start Chat</h4>
         </div>
       </header>
       <main>
         <div id="textbox-block" class="grid">
           <label class="lable" for="phone">Phone to message to:</label>
-          <input class="textbox" id="phone" type="tel" onchange="createLink()" placeholder="(+1)555-11100"/>
+          <input class="textbox" id="phone" type="tel" onchange="createLink()" placeholder="(+98)9121111111"/>
           <div class="btn-call">
             <a id="wlink" href="">Start Chat</a>
           </div>
