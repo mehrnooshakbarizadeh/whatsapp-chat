@@ -3,25 +3,12 @@
     <head>
       <link rel="icon" href="./images/whatsapp_32.png" type="image/png" sizes="32x32">
       <link rel="icon" href="./images/whatsapp_64.png" type="image/png" sizes="64x64">
-      <link rel="stylesheet" href="./fonts/font-awesome.css">
+      <!-- <link rel="stylesheet" href="./fonts/font-awesome.css"> -->
       <link rel="stylesheet" href="style.css">
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script>
-        function createLink() {
-          const p = phone.value;
-          wlink.href = `https://wa.me/${p}`;
-        }
-        function handleKeyPress(e) {
-          if (e.key === 'Enter') {
-            document.getElementById('wlink').focus();
-          }
-        }
-        function handleLoaded(){
-          document.getElementById('phone').addEventListener("keypress", handleKeyPress);
-        }
-      </script>
+      <script src="whatsAppChat.js"></script>
       <title>WhatsApp Start Chat</title>
     </head>
     <body onload="handleLoaded()">
@@ -32,15 +19,42 @@
         </div>
       </header>
       <main>
-        <div id="textbox-block" class="grid">
-          <label class="lable" for="phone">Phone to message to:</label>
-          <input class="textbox" id="phone" type="tel" onchange="createLink()" placeholder="(+98)9121111111"/>
-          <div class="btn-call">
-            <a id="wlink" href="">Start Chat</a>
-          </div>
-          <div class="border">
-            <h5>Designed by <a href="linkedin.com/in/mehrnoosh-akbarizadeh-083b64149">Mehrnoosh Akbarizadeh</a></h5>
-            <h5><a href="https://github.com/mehrnooshakbarizadeh">github.com/mehrnooshakbarizadeh</a></h5>
+        <div id="container" class="grid">
+          <form id="phone-form" class="phone-form">
+            
+            <div class="whatsApp">
+              <label class="lable" for="phone">Phone to message to:</label>
+              <input class="textbox" id="phone" type="tel" onchange="createLink()" placeholder="(+98)9121111111"/>
+            
+              <div class="btn-call">
+                <a id="wlink" href="">Start Chat</a>
+              </div>
+
+            </div>  
+            <div>
+              <a id='addToList' class="add-link" href="" >Do you want to save the number?</a>
+            </div>  
+           
+              <div id="addForm" class="add-form">
+  
+                <input type="text" id="name" class="textbox" placeholder="Name:">
+                  <button id="addPhoneBtn" class="btn-call" href="">Add to phone-book</button>
+
+  
+              </div>
+  
+            </form>
+            <div id="phoneBookContainer" class="phone-book-container">
+              <span class="textStyle">Phone Book</span>
+              <div class="divider">
+              </div>
+              <div class="list" id="phone-list"></div>
+            </div>
+    
+            <div class="border">
+              <h5 class="footer-left">Designed by <a href="linkedin.com/in/mehrnoosh-akbarizadeh-083b64149">Mehrnoosh Akbarizadeh</a></h5>
+              <h5 class="footer-right"><a href="https://github.com/mehrnooshakbarizadeh">github.com/mehrnooshakbarizadeh</a></h5>
+            </div>
           </div>
         </div>
       </main>
